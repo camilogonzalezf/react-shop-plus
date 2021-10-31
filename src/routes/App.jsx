@@ -4,7 +4,7 @@ import '@styles/global.css';
 import Layout from '@containers/Layout';
 import Login from '@pages/Login';
 import RecoveryPassword from '@pages/PasswordRecovery';
-import Home from '@pages/Home';
+import Home from '../pages/Home';
 import SendEmail from '@pages/SendEmail';
 import NewPassword from '@pages/NewPassword';
 import MyAccount from '@pages/MyAccount';
