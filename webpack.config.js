@@ -4,11 +4,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
-    entry: './src/index.js',
+    entry: `${__dirname}/src/index.js`,
     output:{
-        path: path.resolve(__dirname,'dist'),
+        path: `${__dirname}/react-shop-plus`,
         filename: 'bundle.js',
-        publicPath: '/'
+        publicPath: '/react-shop-plus/'
     },
     mode: 'development',
     resolve: {
@@ -58,15 +58,21 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './public/index.html',
-            filename: './index.html'
+            template: 'public/index.html',
+            filename: 'index.html'
         }),
+      new HtmlWebpackPlugin({  // Also generate a test.html
+        filename: '404.html',
+        template: 'public/404.html'
+      }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
         },)
     ],
     devServer: {
-        historyApiFallback: true,
-    }
+        historyApiFallback: {
+        rewrites: [{ from: /\/react-shop-plus\/[^?]/, to: '/404.html' }],
+      },
+    },
 
 }

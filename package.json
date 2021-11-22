@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "react, javascript"
+    "url": "git+https://github.com/camilogonzalezf/react-shop-plus.git"
   },
   "keywords": [
     "react",
