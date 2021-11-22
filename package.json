@@ -1,15 +1,14 @@
 {
-  "homepage": "https://camilogonzalezf.github.io/react-shop-more/",
-  "name": "react-shop",
+  "name": "react-shop-plus",
   "version": "1.0.0",
   "description": "react eshop",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "build": "webpack --mode development"
+    "build": "webpack --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
   },
   "repository": {
     "type": "git",
