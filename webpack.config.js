@@ -7,8 +7,8 @@ module.exports = {
     entry: `${__dirname}/src/index.js`,
     output:{
         path: `${__dirname}/react-shop-plus`,
+        publicPath: '/react-shop-plus/',
         filename: 'bundle.js',
-        publicPath: '/react-shop-plus/'
     },
     mode: 'development',
     resolve: {
